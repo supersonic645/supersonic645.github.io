@@ -1,3 +1,5 @@
 cool websites:
 
-[interstellar (proxy)](https://miniature-umbrella-x6rxp7qqq4j26wjg-8080.app.github.dev/)
+[interstellar (proxy)](https://grade-calculator-alpha.vercel.app/)
+
+[bad piggies](https://chipmunk.land/bad-piggies/)
