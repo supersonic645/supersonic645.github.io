@@ -5,6 +5,12 @@ tagline: cool websites
 description: cool websites
 ---
 
+<style>
+body {
+    background-color: #181a1b;
+}
+</style>
+
 <span style="color: orange; font-size: 20px;">PROXIES
 
 <a href="https://grade-calculator-alpha.vercel.app/">
