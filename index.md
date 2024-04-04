@@ -23,7 +23,7 @@ body {
 <span style="color: orange; font-size: 20px;">GAMES
 
 <a href="https://chipmunk.land/bad-piggies/">
-    <img src="Ross_Pig.webp" width="30" height="30" alt="Bad Piggies">
+    <img src="Ross_Pig.png" width="30" height="30" alt="Bad Piggies">
 </a>
  
 
