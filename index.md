@@ -7,12 +7,18 @@ description: cool websites
 
 <span style="color: orange; font-size: 20px;">PROXIES
 
-[interstellar](https://grade-calculator-alpha.vercel.app/)
+<a href="https://grade-calculator-alpha.vercel.app/">
+    <img src="https://avatars.githubusercontent.com/u/103917385?s=48&v=4" width="30" height="30" alt="Interstellar">
+</a>
+
+
+
 
 <span style="color: orange; font-size: 20px;">GAMES
 
-[bad piggies](https://chipmunk.land/bad-piggies/)
- 
+<a href="https://chipmunk.land/bad-piggies/">
+    <img src="https://static.wikia.nocookie.net/badpiggies/images/8/81/Ross_Pig.png/revision/latest?cb=20180708214345" width="30" height="30" alt="Bad Piggies">
+</a>
  
 
  
