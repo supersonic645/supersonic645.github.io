@@ -10,4 +10,8 @@ description: cool websites
 [bad piggies](https://chipmunk.land/bad-piggies/)
 
 
-<font color="red">1</font>
+<font color="blue">*NOTE* i will check sometime if the websites are working properly</font>
+
+
+
+<font color="blue">there will be more sites soon</font>
