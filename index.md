@@ -5,6 +5,9 @@ tagline: cool websites
 description: cool websites
 ---
 
-[interstellar (proxy; will update)](https://grade-calculator-alpha.vercel.app/)
+[interstellar (proxy)](https://grade-calculator-alpha.vercel.app/)
 
 [bad piggies](https://chipmunk.land/bad-piggies/)
+
+
+<font color="red">1</font>
