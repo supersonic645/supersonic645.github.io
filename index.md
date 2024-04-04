@@ -17,7 +17,7 @@ description: cool websites
 <span style="color: orange; font-size: 20px;">GAMES
 
 <a href="https://chipmunk.land/bad-piggies/">
-    <img src="https://static.wikia.nocookie.net/badpiggies/images/8/81/Ross_Pig.png/revision/latest?cb=20180708214345" width="30" height="30" alt="Bad Piggies">
+    <img src="Ross_Pig.webp" width="30" height="30" alt="Bad Piggies">
 </a>
  
 
