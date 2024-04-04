@@ -1,13 +1,13 @@
 ---
 layout: page
-title: cool stuff
+title: unblocked things
 tagline: cool websites
 description: cool websites
 ---
 
 <span style="color: orange; font-size: 20px;">PROXIES
 
-[interstellar (proxy)](https://grade-calculator-alpha.vercel.app/)
+[interstellar](https://grade-calculator-alpha.vercel.app/)
 
 <span style="color: orange; font-size: 20px;">GAMES
 
@@ -16,13 +16,13 @@ description: cool websites
  
 
  
- 
+ <br><br><br><br><br><br>
 
 
  
 
  
-<font color="blue">*NOTE* i will check sometime if the websites are working properly</font>
+<font color="blue">*NOTE* i will check sometime if the websites are working properly<br><br><br></font>
 
 
 
