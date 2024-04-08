@@ -21,10 +21,8 @@ body {
 
 
 <span style="color: orange; font-size: 20px;">GAMES
-
-<a href="https://jellymar.io/">
-    <img src="" width="30" height="30" alt="Jelly Mario">
-</a>
+<br><br>
+[Jelly Mario (Preview Not Avaliable)](https://jellymar.io/)
 <br><br>
 <a href="https://28klotlucas2.github.io/Mario64webgl/">
     <img src="mario.jpg" width="30" height="30" alt="Super Mario 64">
