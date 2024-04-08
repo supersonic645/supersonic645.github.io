@@ -22,6 +22,14 @@ body {
 
 <span style="color: orange; font-size: 20px;">GAMES
 
+<a href="https://jellymar.io/">
+    <img src="" width="30" height="30" alt="Jelly Mario">
+</a>
+<br><br>
+<a href="https://28klotlucas2.github.io/Mario64webgl/">
+    <img src="mario.jpg" width="30" height="30" alt="Super Mario 64">
+</a>
+<br><br>
 <a href="https://chipmunk.land/bad-piggies/">
     <img src="Ross_Pig.png" width="30" height="30" alt="Bad Piggies">
 </a>
