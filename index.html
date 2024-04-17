@@ -1,13 +1,33 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>you really thought you can go on this website</title>
+    <title>nuh uh</title>
 </head>
 <body>
-    <h1>enter the ultimate secret passowrsd:</h1>
-    <form action="/unlock" method="post">
-        <input type="password" placeholder="Enter password" name="password" required>
-        <button type="submit">ok</button>
-    </form>
+    <h1>you really thought you can go on this page</h1>
+    <p>enter the ultimatnea epicc bobux password right now or big noob:</p>
+
+    <input type="password" id="passwordInput">
+    <button onclick="checkPassword()">Submit</button>
+
+    <div id="content" style="display: none;"></div>
+
+    <script>
+        function checkPassword() {
+            var password = "abcmouse.com";
+
+            // Check if the entered password is correct
+            if (password === "yourPasswordHere") {
+                document.getElementById("content").style.display = "block";
+                fetch("index.md")
+                    .then(response => response.text())
+                    .then(data => {
+                        document.getElementById("content").innerHTML = data;
+                    });
+            } else {
+                alert("noob");
+            }
+        }
+    </script>
 </body>
 </html>
