@@ -58,23 +58,21 @@
                 document.getElementById("content").style.display = "block";
             } else {
                 //alert("noob");
-                //document.body.innerHTML = '';
+                document.body.innerHTML = '';
                 
-                <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; overflow: hidden;">
-                  <div id="embed-google-map" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
-                    <iframe src="https://www.youtube.com/embed/2qBlE2-WL60?ecver=1&autoplay=1&disablekb=1&iv_load_policy=3&loop=1&rel=0&showinfo=0&yt:stretch=16:9&autohide=1&color=red&width=560&width=560" width="100%" height="100%" allowtransparency="true" frameborder="0" style="position: absolute; top: 0; left: 0;"></iframe>
-                  </div>
-                </div>
+                document.write('<div style="position: absolute; top: -10%; left: -10%; width: 120%; height: 120%; 						overflow: hidden;"><div id="embed-google-map" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"><iframe src="https://www.youtube.com/embed/2qBlE2-WL60?ecver=1&autoplay=1&disablekb=1&iv_load_policy=3&loop=1&rel=0&showinfo=0&yt:stretch=16:9&autohide=1&color=red&width=560&width=560" width="100%" height="100%" allowtransparency="true" frameborder="0" style="position: absolute; top: 0; left: 0;"></iframe></div></div>');
                 
-                //document.addEventListener("keydown", function(e) {
-                    //e.preventDefault();
-                //});
+                document.addEventListener("keydown", function(e) {
+                    e.preventDefault();
+                });
                 
-                <style>
-                  body {
-                    pointer-events: none;
-                  }
-                </style>
+                var styleElement = document.createElement('style');
+      			styleElement.innerHTML = 'body { pointer-events: none; }';
+      			document.head.appendChild(styleElement);
+                
+                document.body.style.overflow = 'hidden';  // Disable scrolling
+  				document.body.style.overflowY = 'hidden'; // Disable vertical scrollbar
+  				document.body.style.overflowX = 'hidden'; // Disable horizontal scrollbar
                 
                 window.onbeforeunload = function() {
                     return 'You cannot escape me';
