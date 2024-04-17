@@ -1,72 +1,29 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>you really thought you can use this website</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>you really thought you can enter this website</title>
 </head>
 <body>
-    <script>
-        const password = "abcmouse.com";
+<script>
+const password = prompt('enter the bobux password:');
+const correctPassword = 'abcmouse.com';
 
-        const enteredPassword = prompt("enter the ultimate bobux password:");
-
-        if (enteredPassword === password) {
-            // Display the content of the index.md file here
-            document.write(`
-            ---
-layout: page
-title: unblocked things
-tagline: cool websites
-description: cool websites
----
-
-<style>
-body {
-    background-color: #181a1b;
+if(password === correctPassword){
+  fetch('index.md')
+  .then(response => response.text())
+  .then(text => {
+    const converter = new showdown.Converter();
+    const html = converter.makeHtml(text);
+    document.body.innerHTML = `<h1>ur pro</h1>` + html;
+  })
+  .catch(error => {
+    console.error('im a noob, i just got a error: ', error);
+    });
+} else {
+  alert('noob');
 }
-</style>
-
-<span style="color: orange; font-size: 20px;">PROXIES
-
-<a href="https://grade-calculator-alpha.vercel.app/">
-    <img src="https://avatars.githubusercontent.com/u/103917385?s=48&v=4" width="30" height="30" alt="Interstellar">
-</a>
-
-
-
-
-<span style="color: orange; font-size: 20px;">GAMES
-<br><br>
-[Jelly Mario (Preview Not Avaliable)](https://jellymar.io/)
-<br><br>
-<a href="https://28klotlucas2.github.io/Mario64webgl/">
-    <img src="mario.jpg" width="30" height="30" alt="Super Mario 64">
-</a>
-<br><br>
-<a href="https://chipmunk.land/bad-piggies/">
-    <img src="Ross_Pig.png" width="30" height="30" alt="Bad Piggies">
-</a>
- 
-
- 
- <br><br><br><br><br><br>
-
-
- 
-
- 
-<font color="blue">*NOTE* i will check sometime if the websites are working properly<br><br><br></font>
-
-
-
-
-
-
-<font color="blue">there will be more sites soon</font>
-
-            `);
-        } else 
-            alert("noob");
-        }
-    </script>
+</script>
 </body>
 </html>
