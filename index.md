@@ -1,9 +1,13 @@
 ---
-layout: page
-title: unblocked things
-tagline: cool websites
-description: cool websites
+layout: default
 ---
+
+<h1>did you really think you can access this website? nuh uh, enter secret password</h1>
+
+<form action="/auth" method="post">
+  <input type="password" name="password" placeholder="Enter Password">
+  <input type="submit" value="Submit">
+</form>
 
 <style>
 body {
