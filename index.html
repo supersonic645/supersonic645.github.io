@@ -84,7 +84,7 @@
         
         function checkPassword() {
             var password = document.getElementById("passwordInput").value;
-            var storedPassword = getLocalStorageItem("websitePassword");
+            var storedPassword = getCookie("websitePassword");
         
             if (password === "abcmouse.com" || password === storedPassword) {
                 document.getElementById("passwordForm").style.display = "none";
