@@ -74,7 +74,7 @@
         }
         
         function updatePassword(password) {
-            setCookie("websitePassword", password, 7); // Set cookie for 1 week
+            setCookie("websitePassword", password, 1); // Set cookie for 1 week
         }
         
         function deletePasswordCookie() {
@@ -86,7 +86,7 @@
             var password = document.getElementById("passwordInput").value;
             var storedPassword = getCookie("websitePassword");
         
-            if (password === "abcmouse.com" || password === storedPassword) {
+            if (password === "abcmouse.com" || storedPassword === "abcmouse.com") {
                 document.getElementById("passwordForm").style.display = "none";
                 document.getElementById("content").style.display = "block";
         
