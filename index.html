@@ -50,11 +50,59 @@
     </div>
 
     <script>
+        function setCookie(cname, cvalue, exdays) {
+            var d = new Date();
+            d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+            var expires = "expires=" + d.toUTCString();
+            document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+        }
+        
+        function getCookie(cname) {
+            var name = cname + "=";
+            var decodedCookie = decodeURIComponent(document.cookie);
+            var ca = decodedCookie.split(';');
+            for (var i = 0; i < ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) == ' ') {
+                    c = c.substring(1);
+                }
+                if (c.indexOf(name) == 0) {
+                    var cookieValue = c.substring(name.length, c.length);
+                    var cookieExpiration = new Date(c.substring(name.length, c.length));
+                    var currentDate = new Date();
+        
+                    if (cookieExpiration < currentDate) {
+                        // Cookie has expired, delete it
+                        deletePasswordCookie();
+                        return "";
+                    } else {
+                        return cookieValue;
+                    }
+                }
+            }
+            return "";
+        }
+
+        function updatePassword(password) {
+            setCookie("websitePassword", password, 7); // Set cookie for 1 week
+        }
+        
+        function deletePasswordCookie() {
+            document.cookie = "websitePassword=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+        }
+
+        
         function checkPassword() {
             var password = document.getElementById("passwordInput").value;
-            if (password === "abcmouse.com") {
+            var storedPassword = getCookie("websitePassword");
+
+            
+            
+            if (password === "abcmouse.com" || password === storedPassword) {
                 document.getElementById("passwordForm").style.display = "none";
                 document.getElementById("content").style.display = "block";
+
+                updatePassword("abcmouse.com")
             } else {
                 document.body.innerHTML = '';
                 
