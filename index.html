@@ -10,46 +10,18 @@
         .white-text {
             color: white;
         }
-    </style>
-</head>
-<body>
-    <div id="passwordForm">
-        <h2 class="white-text">you really thought you can enter this website <br><br> enter the secret code:</h2>
-        <input type="password" id="passwordInput" autocomplete="off">
-        <button onclick="checkPassword()">okay</button>
-    </div>
-
-    <div id="content" style="display:none;">
-        <style>
-        body {
-            background-color: #181a1b;
-        }
-        </style>
         
-        <span style="color: orange; font-size: 20px;">PROXIES
-        <br><br>
-        <a href="https://edu.flink.cl/">
-            <img src="https://avatars.githubusercontent.com/u/103917385?s=48&v=4" width="30" height="30" alt="Interstellar">
-        </a>
-        <br><br>
-        <span style="color: orange; font-size: 20px;">GAMES
-        <br><br>
-        <a href="https://jellymar.io/">Jelly Mario (Preview Not Avaliable)</a>
-        <br><br>
-        <a href="https://28klotlucas2.github.io/Mario64webgl/">
-            <img src="mario.jpg" width="30" height="30" alt="Super Mario 64">
-        </a>
-        <br><br>
-        <a href="https://chipmunk.land/bad-piggies/">
-            <img src="Ross_Pig.png" width="30" height="30" alt="Bad Piggies">
-        </a>
-        <br><br><br><br><br><br>
-        <font color="blue">*NOTE* i will check sometime if the websites are working properly<br><br><br></font>
-        <br><br>
-        <font color="blue">there will be more sites soon</font>
-    </div>
+        body {
+            font-family: Arial, sans-serif;
+        }
+    </style>
 
     <script>
+        // Disable right-click context menu so people wouldn't copy sites
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+        
         function setCookie(cname, cvalue, exdays) {
             var d = new Date();
             d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
@@ -74,22 +46,30 @@
         }
         
         function updatePassword(password) {
-            setCookie("websitePassword", password, 1); // Set cookie for 1 week
+            setCookie("websitePassword", password, 1); // Set cookie for 1 day
         }
         
         function deletePasswordCookie() {
             document.cookie = "websitePassword=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
         }
 
-        
-        function checkPassword() {
-            var password = document.getElementById("passwordInput").value;
+        // Function to check stored password when the page loads
+        window.onload = function() {
             var storedPassword = getCookie("websitePassword");
-        
-            if (password === "abcmouse.com" || storedPassword === "abcmouse.com") {
+            
+            if (storedPassword === "abcmouse.com") {
                 document.getElementById("passwordForm").style.display = "none";
                 document.getElementById("content").style.display = "block";
-        
+            } else {
+                deletePasswordCookie();
+            }
+        }
+
+        function checkPassword() {
+            var password = document.getElementById("passwordInput").value;
+            if (password === "abcmouse.com") {
+                document.getElementById("passwordForm").style.display = "none";
+                document.getElementById("content").style.display = "block";
                 updatePassword("abcmouse.com");
             } else {
                 document.body.innerHTML = '';
@@ -113,9 +93,58 @@
                 };
                 
                 //document.documentElement.requestFullscreen();
-                
             }
         }
     </script>
+</head>
+<body>
+    <div id="passwordForm" class="centered">
+        <h2 class="white-text">you really thought you can enter this website <br><br> enter the secret code:</h2>
+        <input type="password" id="passwordInput" autocomplete="off">
+        <button onclick="checkPassword()">okay</button>
+
+        <h2 class="white-text" style="font-size: 16px;"></h2>
+    </div>
+
+    <div id="content" style="display:none;">
+        <style>
+        body {
+            background-color: #181a1b;
+        }
+        </style>
+        
+        
+        <span style="color: orange; font-size: 20px;">PROXIES
+        <br><br>
+        <a href="https://crayonsmath.bizzapp.com/">
+            <img src="https://avatars.githubusercontent.com/u/103917385?s=48&v=4" width="30" height="30" alt="Interstellar">
+        </a>
+        <br><br>
+        <span style="color: orange; font-size: 20px;">GAMES
+        <br><br>
+        <a href="https://jellymar.io/" style="color: DodgerBlue;">Jelly Mario (Preview Not Avaliable)</a>
+        <br><br>
+        <a href="https://28klotlucas2.github.io/Mario64webgl/">
+            <img src="mario.jpg" width="30" height="30" alt="Super Mario 64">
+        </a>
+        <br><br>
+        <a href="https://chipmunk.land/bad-piggies/">
+            <img src="Ross_Pig.png" width="30" height="30" alt="Bad Piggies">
+        </a>
+        <br><br>
+        <span style="color: orange; font-size: 20px;">OTHER SITES
+        <br><br>
+        <a href="https://tbg95.github.io/">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACjElEQVR4AaXSA8wcCxTF8XPvrGrz2TaiZ9u2bduvbljbtm0rqG37487OzL09Seo4/Se/3eGJRnC0zR+8oJrBG5Ly9zVnlSXtEyXwAUGlOJK0PaPZ5AnKi1o3BNax2utTYzAlbHzpRXgBz1iIFy2SjwHcAEceQBuPtTNVsoLeBPdXATwIyOtFve+S4wMe4XwP5SWOfIcIW5ISvRfivwO4j4OfJOVBa47cHhdnD8LlOxge4//lYLrmnhfF8vjVQsz3WO60CF09kesb/DvUk7ymPdKvYXLB0Re6xCWZJzzRqZ7Iv4e73xMoDLUR4S7EOMsjfMKRAVZAc4DFcodFsofXptf5bmRbODoBeM0Kqatgeg1czkt5AQ+bYbHm0EwS8BzfwqV0y0cvrLbQ35BEvmvQZGC066+n77fQfhezJeJopIFGUH9cvRzXex4jLx7Rf8eFg/t/BsfDdI4nyHgkbSyUzWA8v8AK+pTl9b3aX4zZ6rEO80SvT3neq8FkN45mZbJXsz7LRN6UjNfTHF7b+uXz+60cvRHZzrOaDAWYJbJbXKqmPMRhj/0ssDV3vljPQ3/RA9wtCTrDsBYOh+MCuP8Ax6IdPz/bu2HjwdssDM6SlB+W5We/8A5SeEgryxdaFb9LBtdqBbx58dj+G3BS27997iwE3kMCbJa0/8oP7A9N2VpFjN6IUOShD/QyzPc87jv9ZbCzWg7aDuBBGkv9vaDVLdKOONOEsKzq85UA3EcB7aFzaSEZ3Uqr6Gw6QEVHj6dfXTSwLAXGIqpGlakq3U6XUoZmHb3+HDmtoYBmEZTApQKAHUcV0QqqT7XoAnqRRhDDRMpRA0IKJ1px0nltakll9BANogx9Q1fSAtpIOAIUuD+0EH19CgAAAABJRU5ErkJggg==" width="30" height="30" alt="TBG95">
+        </a>
+        <br><br>
+        <a href="https://www.hahagames.com/" style="color: DodgerBlue;">Haha Games (Preview Not Avaliable)</a>
+        <br><br><br><br><br><br><br><br>
+        <font color="DodgerBlue" style="font-size: 16px;">*NOTE* i will check sometime if the websites are working properly</font>
+        <br><br>
+        <font color="DodgerBlue" style="font-size: 16px;">there will be more sites soon</font>
+    </div>
+
 </body>
 </html>
+
